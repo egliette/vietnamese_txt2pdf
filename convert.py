@@ -9,7 +9,7 @@ from utils import txt2pdf, create_folder
 def main(txt_path, pdf_path, file_convert=True):
     if file_convert:
         if pdf_path is None:
-            pdf_path = txt_path.split(".")[-1] + ".pdf"
+            pdf_path = txt_path.split(".")[0] + ".pdf"
         txt2pdf(txt_path, pdf_path)
     else:
         if pdf_path is None:
